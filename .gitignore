@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Papki i faili git doljen ignorit 
+.vscode
+.idea 
+.DS_Store
+node_modules
+build/
+*.psd 
