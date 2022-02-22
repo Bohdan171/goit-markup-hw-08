@@ -3,7 +3,6 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .team__title {
   margin-bottom: 50px;
 }
@@ -20,11 +19,9 @@
   border-radius: 0px 0px 4px 4px;
 }
 // //////////////////////caption //////////////
-
 .team__text {
   text-align: center;
   padding: 30px 32px 30px 32px;
-
   &--title {
     font-weight: 500;
     font-size: 16px;
@@ -33,7 +30,6 @@
     color: var(--brand-black);
     margin-bottom: 10px;
   }
-
   &--class {
     font-size: 16px;
     line-height: 1.2;
@@ -42,12 +38,10 @@
     margin-bottom: 16px;
   }
 }
-
 ////////////////////list-logo//////////////////////
 .team-socials {
   display: flex;
 }
-
 .team-socials__item + .team-socials__item {
   margin-left: 10px;
 }
@@ -56,11 +50,9 @@
   height: 20px;
   fill: var(--brand-link-icon);
 }
-
 .team-socials__svg {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .team-socials__link {
   display: flex;
   width: 44px;
@@ -70,7 +62,6 @@
   cursor: pointer;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     background-color: var(--brand-blue);
@@ -79,7 +70,6 @@
 }
 
 ///// покраска иконок при фокусе//////////////////////
-
 .team-socials__svg {
   .team-socials__link:hover &,
   .team-socials__link:focus & {
@@ -87,73 +77,3 @@
   }
 }
 
-// .team {
-//   background-color: var(--brand-background-team);
-//   padding-top: 94px;
-//   padding-bottom: 94px;
-// }
-// .team-title {
-//   margin-bottom: 50px;
-// }
-// .team-list {
-//   display: flex;
-//   margin-right: -30px;
-// }
-// .team-item {
-//   margin-right: 30px;
-//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 2px 1px rgba(0, 0, 0, 0.2);
-//   border-radius: 0px 0px 4px 4px;
-//   background: #ffffff;
-// }
-// .team-text {
-//   text-align: center;
-//   padding: 30px 32px 30px 32px;
-// }
-// .team-title-people {
-//   font-weight: 500;
-//   font-size: 16px;
-//   line-height: 1.2;
-//   letter-spacing: 0.03em;
-//   color: var(--brand-black);
-//   margin-bottom: 10px;
-// }
-// .team-class {
-//   font-size: 16px;
-//   line-height: 1.2;
-//   letter-spacing: 0.03em;
-//   color: var(--brand-grey);
-//   margin-bottom: 16px;
-// }
-// .team-socials-item + .team-socials-item {
-//   margin-left: 10px;
-// }
-// .team-socials-list {
-//   display: flex;
-//   justify-content: center;
-// }
-// .team-socials-link {
-//   width: 44px;
-//   height: 44px;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//   display: flex;
-//   border-radius: 50%;
-//   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .team-socials-icon {
-//   width: 20px;
-//   height: 20px;
-//   fill: var(--brand-link-icon);
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-// .team-socials-link:hover,
-// .team-socials-link:focus {
-//   background-color: var(--brand-blue);
-//   fill: var(--brand-white);
-// }
-// .team-socials-link:hover .team-socials-icon,
-// .team-socials-link:focus .team-socials-icon {
-//   fill: var(--brand-white);
-// }
