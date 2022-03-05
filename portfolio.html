@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -17,54 +11,91 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <title>Портфолио</title>
+    <title>Партфолио</title>
+    <script src="./js/modal.js"></script>
   </head>
   <body>
-    <!--  Верхняя линия-->
+    <!--  Шапка !-->
     <header class="header">
       <div class="container header__container">
-        <a class="header__link-logo" href=""
-          ><span lang="en" class="header__text-web">Web</span>Studio</a
+        <a class="header__link-logo" href="#"><span class="header__text-web">Web</span>Studio</a>
+
+        <div class="mobile-menu js-menu-container" id="mobile-nav">
+          <div class="mob-nav">
+            <nav class="header-nav">
+              <ul class="header-nav__list">
+                <li class="header-nav__item">
+                  <a class="header-nav__link" href="./index.html">Студия</a>
+                </li>
+                <li class="header-nav__item">
+                  <a class="header-nav__link active-page current" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <div class="mobile-cont">
+              <ul class="header-adress__list">
+                <li class="header-adress__item">
+                  <a class="header-adress__link--mail connection" href="mailto:info@devstudio.com"
+                    ><svg class="header-adress__icom--mail" width="16" height="12">
+                      <use href="./images/icons.svg/icons.svg#icon-envelope"></use></svg
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="header-adress__item">
+                  <a class="header-adress__link--tel connection" href="tel:+380961111111"
+                    ><svg class="header-adress__icom--tel" width="12" height="16">
+                      <use href="./images/icons.svg/icons.svg#icon-smartphone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="header-messenger__list">
+                <li class="header-messenger__item">
+                  <a href="#" class="header-messenger__link">Instagram</a>
+                </li>
+                <li class="header-messenger__item">
+                  <a href="#" class="header-messenger__link">Twitter</a>
+                </li>
+                <li class="header-messenger__item">
+                  <a href="#" class="header-messenger__link">Facebook</a>
+                </li>
+                <li class="header-messenger__item">
+                  <a href="#" class="header-messenger__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="menu-btn is-open js-open-menu"
+          type="button"
+          aria-controls="mobile-nav"
+          data-menu-button
         >
-        <nav class="header-nav">
-          <ul class="header-nav__list">
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="./index.html">Студия</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link active-page current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
-          </ul>
-        </nav>
-        <ul class="header-adress__list">
-          <li class="header-adress__item">
-            <a class="header-adress__link--mail connection" href="mailto:info@devstudio.com"
-              ><svg class="header-adress__icon--mail" width="16" height="12">
-                <use href="./images/icons.svg/icons.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header-adress__item">
-            <a class="header-adress__link--tel connection" href="tel:+380961111111"
-              ><svg class="header-adress__icon--tel" width="12" height="16">
-                <use href="./images/icons.svg/icons.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <svg width="24" height="16">
+            <use class="icon-menu" href="./images/icons/symbol .svg#icon-close_24px"></use>
+
+            <use class="icon-cross" href="./images/icons/symbol .svg#icon-menu_24px"></use>
+          </svg>
+        </button>
       </div>
     </header>
-
-    <!-- Портфолио -->
+    <!-- Герой -->
     <main>
       <section class="services">
         <div class="container">
           <h1 class="visually-hidden">Услуги</h1>
           <ul class="services-list">
             <li class="services-list__item">
-              <button type="button" class="services-list__btn second-btn">Все</button>
+              <button type="button" class="services-list__btn karen-btn">Все</button>
             </li>
             <li class="services-list__item">
               <button type="button" class="services-list__btn">Веб-сайты</button>
@@ -79,22 +110,35 @@
               <button type="button" class="services-list__btn">Маркетинг</button>
             </li>
           </ul>
-          <!-- Card -->
+
+          <!-- карточки -->
           <ul class="services-cards">
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img
-                    class="services-img"
-                    src="./images/crack.jpg"
-                    alt="сайт в ноуте"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/crack.jpg 1x, ./dz-2.img/crack2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/crack-tablet1x.jpg 1x, ./dz-2.img/crack-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/crack-mob1x.jpg 1x, ./dz-2.img/crack-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/crack.jpg" alt="сайт в ноуте" />
+                  </picture>
+
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -105,19 +149,34 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img
-                    class="services-img"
-                    src="./images/basketball.jpg"
-                    alt="играют в баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/basketball.jpg 1x, ./dz-2.img/basket2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/basket-tablet1x.jpg 1x, ./dz-2.img/basket-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/basket-mob1x.jpg 1x, ./dz-2.img/basket-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img
+                      class="services-img"
+                      src="./dz-2.img/basketball.jpg"
+                      alt="играют в баскетбол"
+                    />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -130,14 +189,30 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/fish.jpg" alt="рыба" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/fish.jpg 1x, ./dz-2.img/fish2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/fish-tablet1x.jpg 1x, ./dz-2.img/fish-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/fish-mob1x.jpg 1x, ./dz-2.img/fish-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/fish.jpg" alt="рыба" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -148,19 +223,30 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img
-                    class="services-img"
-                    src="./images/headphones.jpg"
-                    alt="наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/headphones.jpg 1x, ./dz-2.img/head2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/head-tablet1x.jpg 1x, ./dz-2.img/head-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/head-mob1x.jpg 1x, ./dz-2.img/head-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/headphones.jpg" alt="наушники" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -171,14 +257,30 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/boxes.jpg" alt="коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/boxes.jpg 1x, ./dz-2.img/boxes2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/boxes-tablet1x.jpg 1x, ./dz-2.img/boxes-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/boxes-mob1x.jpg 1x, ./dz-2.img/boxes-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/boxes.jpg" alt="коробки" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -189,14 +291,33 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/monitor.jpg" alt="монитор" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/monitor.jpg 1x, ./dz-2.img/monitor2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./dz-2.img/monitor-tablet1x.jpg 1x,
+                        ./dz-2.img/monitor-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/monitor-mob1x.jpg 1x, ./dz-2.img/monitor-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/monitor.jpg" alt="монитор" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -209,14 +330,30 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/book.jpg" alt="книга" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/book.jpg 1x, ./dz-2.img/book2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/book-tablet1x.jpg 1x, ./dz-2.img/book-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/book-mob1x.jpg 1x, ./dz-2.img/book-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/book.jpg" alt="книга" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -229,14 +366,30 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/tag.jpg" alt="бирка" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/tag.jpg 1x, ./dz-2.img/tag2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/tag-tablet1x.jpg 1x, ./dz-2.img/tag-tablet2x.jpg 2x"
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/tag-mob1x.jpg 1x, ./dz-2.img/tag-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/tag.jpg" alt="бирка" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -247,14 +400,33 @@
               </a>
             </li>
             <li class="services-cards__item">
-              <a href="" class="services-cards__link">
+              <a href="#" class="services-cards__link">
                 <div class="services-animation">
-                  <img class="services-img" src="./images/notebook.jpg" alt="ноутбук" width="370" />
+                  <picture>
+                    <source
+                      srcset="./dz-2.img/notebook.jpg 1x, ./dz-2.img/notebook2x.jpg 2x"
+                      media="(min-width:1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./dz-2.img/notebook-tablet1x.jpg 1x,
+                        ./dz-2.img/notebook-tablet2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+
+                    <source
+                      srcset="./dz-2.img/notebook-mob1x.jpg 1x, ./dz-2.img/notebook-mob2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+                    <img class="services-img" src="./dz-2.img/notebook.jpg" alt="ноутбук" />
+                  </picture>
                   <div class="services-bgr">
                     <p class="services-bgr__text">
-                      Технокряк это современная площадка распространения коронавируса. Компании
-                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
-                      конкурентов.
+                      Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                      сервисов. Все это позволит посетителю получить исчерпывающие сведения о
+                      компании или частном лице.
                     </p>
                   </div>
                 </div>
@@ -270,68 +442,66 @@
     </main>
     <!-- Подвал -->
     <footer class="footer">
-      <div class="container footer-cont">
-        <div class="footer-adress cont">
-          <a class="footer__link-logo" href=""
-            ><span lang="en" class="footer__text-web">Web</span>Studio</a
-          >
-          <address class="footer-adress">
-            <ul class="footer-adress__list">
-              <li class="footer-adress__item--adress">
-                <a
-                  class="footer-adress__link--adress connection"
-                  href="https://goo.gl/maps/kTG9XpMzDLZgEVhh7"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+      <div class="container footer-desktop">
+        <div class="footer-cont">
+          <div class="foot-adress">
+            <a class="footer__link-logo" href="#"
+              ><span class="footer__text-web">Web</span>Studio</a
+            >
+            <address class="footer-adress">
+              <ul class="footer-adress__list">
+                <li class="footer-adress__item--adress">
+                  <a class="footer-adress__link--adress connection" href="#"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="footer-adress__item">
+                  <a class="footer-adress__link-tel connection" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer-adress__item">
+                  <a class="footer-adress__link-mail connection" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social">
+            <p class="footer-social__text">присоединяйтесь</p>
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://www.instagram.com/"
+                  ><svg class="footer-social__icon">
+                    <use href="./images/icons.svg/icons.svg#icon-instagram-21"></use></svg
+                ></a>
               </li>
-              <li class="footer-adress__item">
-                <a class="footer-adress__link-mail connection" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://twitter.com/"
+                  ><svg class="footer-social__icon">
+                    <use href="./images/icons.svg/icons.svg#icon-twitter-111"></use></svg
+                ></a>
               </li>
-              <li class="footer-adress__item">
-                <a class="footer-adress__link-tel connection" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://www.facebook.com/"
+                  ><svg class="footer-social__icon">
+                    <use href="./images/icons.svg/icons.svg#icon-facebook-11"></use></svg
+                ></a>
+              </li>
+              <li class="footer-social__item">
+                <a class="footer-social__link" href="https://www.linkedin.com/"
+                  ><svg class="footer-social__icon">
+                    <use href="./images/icons.svg/icons.svg#icon-linkedin-11"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social cont">
-          <p class="footer-social__text">присоединяйтесь</p>
-          <ul class="footer-social__list">
-            <li class="footer-social__item">
-              <a class="footer-social__link" href="https://www.instagram.com/"
-                ><svg class="footer-social__icon">
-                  <use href="./images/icons.svg/icons.svg#icon-instagram-21"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link" href="https://twitter.com/"
-                ><svg class="footer-social__icon">
-                  <use href="./images/icons.svg/icons.svg#icon-twitter-111"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link" href="https://www.facebook.com/"
-                ><svg class="footer-social__icon">
-                  <use href="./images/icons.svg/icons.svg#icon-facebook-11"></use></svg
-              ></a>
-            </li>
-            <li class="footer-social__item">
-              <a class="footer-social__link" href="https://www.linkedin.com/"
-                ><svg class="footer-social__icon">
-                  <use href="./images/icons.svg/icons.svg#icon-linkedin-11"></use></svg
-              ></a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer-input">
           <form class="footer-input__form">
             <p class="footer-input__text">Подпишитесь на рассылку</p>
-            <div class="footer-subscribe cont">
+            <div class="footer-subscribe">
               <input
                 class="footer-subscribe__input--mail"
                 type="email"
@@ -340,7 +510,7 @@
                 placeholder="E-mail"
               />
               <label for="email"></label>
-              <button type="submit" class="footer-btn">
+              <button type="submit" class="footer-btn btn">
                 <svg class="footer-btn__svg" width="24" height="24">
                   <use
                     class="footer-btn__icon"
@@ -353,5 +523,13 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
