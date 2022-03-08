@@ -1,79 +1,73 @@
-.special{
-    display: flex;
-    padding: 60px 0;
-    
-    @media screen and (min-width:1200px) {
+.special {
+  //   display: flex;
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;
-    }
+  }
 }
 // //////////////  list //////////////////////////
 
- .special__list{
-    display: flex;
-    @media screen and (max-width:767px){
-        flex-direction: column;
-    }
-    @media screen and(min-width:768px){
-        flex-wrap: wrap;
-        margin: -15px;
-    }
-    @media screen and(min-width:1200px){
-        flex-wrap: nowrap;
-        margin: -15px;
-        
-    }
- }
-    .special__item{
-        @media screen and(min-width:768px){
-            
-            width: calc((100% - 4 * 15px) / 2);
-            margin: 15px;
-        }
-        @media screen and(min-width:1200px){
-            width: calc((100% - 8 * 15px) / 4);
-        }
-        
-    }
-    @media screen and (max-width:767px) {
-        .special__item:not(:last-child){
-            margin-bottom: 30px;
-        }
-    }
-.special-cont{
-    
-    height: 120px;
-    width: 100%;
-    background-color: $brand-background-team;
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
+.special__list {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+  @media screen and(min-width:768px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and(min-width:1200px) {
+    flex-wrap: nowrap;
+    margin: -15px;
+  }
+}
+.special__item {
+  @media screen and(min-width:768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media screen and(min-width:1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .special__item:not(:last-child) {
     margin-bottom: 30px;
-    &__svg{
-            width: 70px;
-            height: 70px;  
-    }
-    
- }
- .special__feature{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $brand-black;
-    margin-bottom: 10px;
-    text-align: center;
-    @media screen and(min-width:768px){
-        text-align:start;
-    }
-    
-    }
-.special__text{
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: $brand-grey;
-    }
+  }
+}
+.special-cont {
+  height: 120px;
+  width: 100%;
+  background-color: $brand-background-team;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  &__svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+.special__feature {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $brand-black;
+  margin-bottom: 10px;
+  text-align: center;
+  @media screen and(min-width:768px) {
+    text-align: start;
+  }
+}
+.special__text {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $brand-grey;
+}
