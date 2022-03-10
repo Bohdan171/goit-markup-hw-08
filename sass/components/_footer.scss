@@ -32,6 +32,7 @@
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 }
 .footer-cont {
@@ -40,7 +41,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    // align-items: baseline;
+    align-items: baseline;
     margin-bottom: 60px;
     padding: 0 15px;
   }
@@ -50,7 +51,7 @@
   }
 }
 .foot-adress {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
@@ -220,7 +221,7 @@
   padding-bottom: 15px;
   padding-left: 16px;
   color: $brand-white;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 767.98px) {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
